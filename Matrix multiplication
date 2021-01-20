@@ -1,0 +1,110 @@
+//matrix_multiplication.cpp
+#include <iostream>
+#include <stdlib.h>
+#include <cstdlib>
+#include <array>
+#include "Matrixes.h"
+
+using namespace std;
+
+void checking_if_the_matrix_can_be_multiplied() {
+
+    if (matrixA_numOfColumns != matrixB_numOfRows) {
+        cout << "You cannot multiply those matrixes\n";
+        exit(EXIT_SUCCESS);
+    }
+}
+
+int main()
+{
+    checking_if_the_matrix_can_be_multiplied();
+
+    Matrixes matrix;
+
+    matrix.A = matrix.filling_A();
+    matrix.B = matrix.filling_B();
+    matrix.AxB = matrix.filling_with_zeros();
+
+    matrix.AxB = matrix.multiplication();
+
+    cout << "\n\nMatrix AxB: \n";
+
+    for (int i = 0; i < matrixA_numOfRows; i++) {
+        for (int j = 0; j < matrixB_numOfColumns; j++) {
+            cout << matrix.AxB[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+//Matrixes.h
+#ifndef MATRIXES_H
+#define MATRIXES_H
+#include <array>
+#include <iostream>
+#include "MatrixSize.h"
+
+
+using namespace std;
+
+class Matrixes
+{
+    public:
+
+        array <array <int, matrixA_numOfColumns>, matrixA_numOfRows> A;
+        array <array <int, matrixB_numOfColumns>, matrixB_numOfRows> B;
+        array <array <int, matrixB_numOfColumns>, matrixA_numOfRows> AxB;
+
+        array <array <int, matrixA_numOfColumns>, matrixA_numOfRows> filling_A() {
+            cout << "Fill matrix A:" << endl;
+            for (int i = 0; i < matrixA_numOfRows; i++) {
+                for (int j = 0; j < matrixA_numOfColumns; j++) {
+                    cin >> A[i][j];
+                }
+            }
+            return A;
+        }
+
+        array <array <int, matrixB_numOfColumns>, matrixB_numOfRows> filling_B() {
+            cout << "Fill matrix B:" << endl;
+            for (int i = 0; i < matrixB_numOfRows; i++) {
+                for (int j = 0; j < matrixB_numOfColumns; j++) {
+                    cin >> B[i][j];
+                }
+            }
+            return B;
+        }
+
+        array <array <int, matrixB_numOfColumns>, matrixA_numOfRows> filling_with_zeros() {
+            for (int i = 0; i < matrixA_numOfRows; i++) {
+                for (int j = 0; j < matrixB_numOfColumns; j++) {
+                    AxB[i][j] = 0;
+                }
+            }
+            return AxB;
+        }
+
+        array <array <int, matrixB_numOfColumns>, matrixA_numOfRows> multiplication() {
+            for (int i = 0; i < matrixB_numOfRows - 1; i++) {
+                for (int j = 0; j < matrixA_numOfRows; j++) {
+                    for (int k = 0; k < matrixA_numOfColumns; k++) {
+                        AxB[j][i] += A[j][k] * B[k][i];
+                    }
+                }
+            }
+            return AxB;
+        }
+
+};
+
+#endif // MATRIXES_H
+
+
+//MatrixSize.h
+const int matrixA_numOfRows = 3;
+const int matrixA_numOfColumns = 3;
+const int matrixB_numOfRows = 3;
+const int matrixB_numOfColumns = 2;
