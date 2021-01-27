@@ -1,0 +1,43 @@
+#include <iostream>
+#include <array>
+#include <cmath>
+
+using namespace std;
+
+class Vectors
+{
+public:
+
+	array<float, 2> addition(array<float, 2> vector1, array<float, 2> vector2) {
+		float valX = vector1[0] + vector2[0];
+		float valY = vector1[1] + vector2[1];
+		return { valX, valY };
+	}
+
+	array<float, 2> subtraction(array<float, 2> vector1, array<float, 2> vector2) {
+		float valX = vector1[0] - vector2[0];
+		float valY = vector1[1] - vector2[1];
+		return { valX, valY };
+	}
+
+	array<float, 2> scalarMultiplication(array<float, 2> vector1, float scalar) {
+		float valX = vector1[0] * scalar;
+		float valY = vector1[1] * scalar;
+		return { valX, valY };
+	}
+
+	float dotProduct(array<float, 2> vector1, array<float, 2> vector2) {
+		float val = 0;
+		for (int i = 0; i < 2; i++) {
+			val += vector1[i] * vector2[i];
+		}
+		return val;
+	}
+
+	float lengthCalculation(array<float, 2> vector) {
+		float length = sqrt(pow(vector[0], 2) + pow(vector[1], 2));
+		return length;
+	}
+
+};
+
