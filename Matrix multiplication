@@ -59,7 +59,7 @@ class Matrixes
         array <array <int, matrixB_numOfColumns>, matrixA_numOfRows> AxB;
 
         array <array <int, matrixA_numOfColumns>, matrixA_numOfRows> filling_A() {
-            cout << "Fill matrix A:" << endl;
+            cout << "Fill matrix A:" << matrixA_numOfColumns << "x" << matrixA_numOfRows << endl;
             for (int i = 0; i < matrixA_numOfRows; i++) {
                 for (int j = 0; j < matrixA_numOfColumns; j++) {
                     cin >> A[i][j];
@@ -69,7 +69,7 @@ class Matrixes
         }
 
         array <array <int, matrixB_numOfColumns>, matrixB_numOfRows> filling_B() {
-            cout << "Fill matrix B:" << endl;
+            cout << "Fill matrix B:" << matrixB_numOfColumns << "x" << matrixB_numOfRows << endl;
             for (int i = 0; i < matrixB_numOfRows; i++) {
                 for (int j = 0; j < matrixB_numOfColumns; j++) {
                     cin >> B[i][j];
