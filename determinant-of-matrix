@@ -23,6 +23,19 @@ double determinant(vector<vector<double>> matrix, double multiplier) {
         return (matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]) * multiplier;
     }
     else {
+        if (matrix[0][0] == 0) {
+            for (unsigned int i = 1; i < matrix.size(); i++) {
+                if (matrix[i][0] != 0) {
+                    matrix[0].swap(matrix[i]);
+                    multiplier *= -1;
+                    break;
+                }
+                else 
+                    continue;
+                
+            }
+            return 0;
+        } 
         long double firstRowDivider = matrix[0][0];
         for (unsigned int j = 0; j < matrix[0].size(); j++) {
             matrix[0][j] /= firstRowDivider;
