@@ -3,37 +3,73 @@
 
 using namespace std;
 
-auto addEdge(vector<vector<int>> adj, int v, int u) {
-    adj[v].push_back(u);
-    adj[u].push_back(v);
+auto createGraphWithoutEdges(vector<vector<int>> adj, int V) {
+    vector<int> tmpRow;
+    for (int i = 0; i < V; i++) {
+        tmpRow.push_back(0);
+    }
+    for (unsigned int i = 0; i < V; i++) {
+        adj.push_back(tmpRow);
+    }
+    return adj;
+}
+auto addVertex(vector<vector<int>> adj) {
+    vector<int> tmpRow;
+    for (int i = 0; i < adj.size(); i++) {
+        tmpRow.push_back(0);
+    }
+    adj.push_back(tmpRow);
+    for (int i = 0; i < adj.size(); i++) {
+        adj[i].push_back(0);
+    }
     return adj;
 }
 
-void printGraph(vector<vector<int>> adj, int V) {
-    for (unsigned int i = 0; i < V; i++) {
-        cout << "\n Adjacency list of vertex " << i << endl << i;
+auto addEdgeToDirectedGraph(vector<vector<int>> adj, int u, int v) {
+    if (u == v)
+        adj[u][v] = 2;
+    else
+        adj[u][v] = 1;
 
-        for (unsigned int j = 0; j < adj[i].size(); j++)
-        {
-            cout << " > " << adj[i][j];
+    return adj;
+}
+auto addEdgeToUndirectedGraph(vector<vector<int>> adj, int u, int v) {
+    if (u == v)
+        adj[u][v] = 2;
+    else {
+        adj[u][v] = 1;
+        adj[v][u] = 1;
+    }
+
+    return adj;
+}
+
+auto removeEdgeToDirectedGraph(vector<vector<int>> adj, int u, int v) {
+    adj[u][v] = 0;
+    return adj;
+}
+auto removeEdgeToUndirectedGraph(vector<vector<int>> adj, int u, int v) {
+    adj[v][u] = 0;
+    adj[u][v] = 0;
+    return adj;
+}
+
+void printGraph(vector<vector<int>> adj) {
+    for (unsigned int i = 0; i < adj.size(); i++) {
+        cout << "[";
+        for (unsigned int j = 0; j < adj[i].size(); j++) {
+            cout << adj[i][j] << " ";
         }
+        cout << "]\n";
     }
 }
+
 
 
 int main()
 {
     int V = 5;
-    vector<vector<int>> adj(V);
-
-    adj = addEdge(adj, 0, 1);
-    adj = addEdge(adj, 0, 4);
-    adj = addEdge(adj, 1, 2);
-    adj = addEdge(adj, 1, 3);
-    adj = addEdge(adj, 1, 4);
-    adj = addEdge(adj, 2, 3);
-    adj = addEdge(adj, 3, 4);
-    printGraph(adj, V);
+    vector<vector<int>> adj;
 
     return 0;
 }
