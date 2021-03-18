@@ -3,7 +3,7 @@
 
 using namespace std;
 
-auto createGraphWithoutEdges(vector<vector<int>> adj, int V) {
+void createGraphWithoutEdges(vector<vector<int>> &adj, int V) {
     vector<int> tmpRow;
     for (int i = 0; i < V; i++) {
         tmpRow.push_back(0);
@@ -11,9 +11,8 @@ auto createGraphWithoutEdges(vector<vector<int>> adj, int V) {
     for (unsigned int i = 0; i < V; i++) {
         adj.push_back(tmpRow);
     }
-    return adj;
 }
-auto addVertex(vector<vector<int>> adj) {
+void addVertex(vector<vector<int>> &adj) {
     vector<int> tmpRow;
     for (int i = 0; i < adj.size(); i++) {
         tmpRow.push_back(0);
@@ -22,36 +21,29 @@ auto addVertex(vector<vector<int>> adj) {
     for (int i = 0; i < adj.size(); i++) {
         adj[i].push_back(0);
     }
-    return adj;
 }
 
-auto addEdgeToDirectedGraph(vector<vector<int>> adj, int u, int v) {
+void addEdgeToDirectedGraph(vector<vector<int>> &adj, int u, int v) {
     if (u == v)
         adj[u][v] = 2;
     else
         adj[u][v] = 1;
-
-    return adj;
 }
-auto addEdgeToUndirectedGraph(vector<vector<int>> adj, int u, int v) {
+void addEdgeToUndirectedGraph(vector<vector<int>> &adj, int u, int v) {
     if (u == v)
         adj[u][v] = 2;
     else {
         adj[u][v] = 1;
         adj[v][u] = 1;
     }
-
-    return adj;
 }
 
-auto removeEdgeToDirectedGraph(vector<vector<int>> adj, int u, int v) {
+void removeEdgeToDirectedGraph(vector<vector<int>> &adj, int u, int v) {
     adj[u][v] = 0;
-    return adj;
 }
-auto removeEdgeToUndirectedGraph(vector<vector<int>> adj, int u, int v) {
+void removeEdgeToUndirectedGraph(vector<vector<int>> &adj, int u, int v) {
     adj[v][u] = 0;
     adj[u][v] = 0;
-    return adj;
 }
 
 void printGraph(vector<vector<int>> adj) {
@@ -63,8 +55,6 @@ void printGraph(vector<vector<int>> adj) {
         cout << "]\n";
     }
 }
-
-
 
 int main()
 {
