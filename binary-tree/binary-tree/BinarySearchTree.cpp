@@ -18,49 +18,44 @@ void BinarySearchTree::destroyTree() {
 }
 
 
-void BinarySearchTree::insert(int key) {
-	if (root == NULL) {
-		root = new Node(key);
-	}
-	else {
-		insert(key, root);
-	}
+void BinarySearchTree::insert(int val) {
+	if (root == NULL) 
+		root = new Node(val);
+	else 
+		insert(val, root);
 }
 
-void BinarySearchTree::insert(int key, Node* node) {
-	if (key >= node->data) {
+void BinarySearchTree::insert(int val, Node* node) {
+	if (val >= node->data) {
 		if (node->right == NULL) 
-			node->right= new Node(key);
+			node->right= new Node(val);
 		else 
-			insert(key, node->right);
+			insert(val, node->right);
 	}
 	else {
 		if (node->left == NULL) 
-			node->left = new Node(key);
+			node->left = new Node(val);
 		else
-			insert(key, node->left);
+			insert(val, node->left);
 	}
 }
 
 
-Node* BinarySearchTree::search(int key) {
-	return search(key, root);
+Node* BinarySearchTree::search(int val) {
+	return search(val, root);
 }
 
-Node* BinarySearchTree::search(int key, Node* node) {
+Node* BinarySearchTree::search(int val, Node* node) {
 	if (node->data == NULL) {
 		return NULL;
 	}
 	else {
-		if (key == node->data) {
+		if (val == node->data) 
 			return node;
-		}
-		else if (key > node->data) {
-			return search(key, node->right);
-		}
-		else {
-			return search(key, node->left);
-		}
+		else if (val > node->data) 
+			return search(val, node->right);
+		else 
+			return search(val, node->left);
 	}
 }
 
