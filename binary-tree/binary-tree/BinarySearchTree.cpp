@@ -52,7 +52,7 @@ Node* BinarySearchTree::search(int key, Node* node) {
 		return NULL;
 	}
 	else {
-		if (node->data == key) {
+		if (key == node->data) {
 			return node;
 		}
 		else if (key > node->data) {
