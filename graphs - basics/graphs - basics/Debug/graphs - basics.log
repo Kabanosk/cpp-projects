@@ -1,6 +1,0 @@
-﻿  graphs - basics.cpp
-  UndirectedGraph.cpp
-C:\programowanie\c++\VisualStudio\graphs - basics\graphs - basics\UndirectedGraph.cpp(10,23): warning C4018: '<': signed/unsigned mismatch
-C:\programowanie\c++\VisualStudio\graphs - basics\graphs - basics\UndirectedGraph.cpp(14,23): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  graphs - basics.vcxproj -> C:\programowanie\c++\VisualStudio\graphs - basics\Debug\graphs - basics.exe
