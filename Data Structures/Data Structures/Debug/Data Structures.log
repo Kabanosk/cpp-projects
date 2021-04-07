@@ -1,2 +1,97 @@
-﻿  Data Structures.cpp
-  Data Structures.vcxproj -> C:\programowanie\c++\VisualStudio\Data Structures\Debug\Data Structures.exe
+﻿  AVLtree.cpp
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(12,1): error C2511: 'int AVLtree::height(AVLNode *)': overloaded member function not found in 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(24): message : see declaration of 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(18,1): error C2511: 'int AVLtree::getBalance(AVLNode *)': overloaded member function not found in 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(24): message : see declaration of 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(21,12): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(21,33): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(28,1): error C2511: 'AVLNode *AVLtree::insert(AVLNode *,int)': overloaded member function not found in 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(24): message : see declaration of 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(33,22): error C2352: 'AVLtree::insert': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(39): message : see declaration of 'AVLtree::insert'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(35,23): error C2352: 'AVLtree::insert': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(39): message : see declaration of 'AVLtree::insert'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(39,28): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(40,9): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(39,24): error C2660: 'AVLtree::max': function does not take 1 arguments
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(7,14): message : see declaration of 'AVLtree::max'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(42,34): error C2664: 'int AVLtree::getBalance(BSTNode *)': cannot convert argument 1 from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(42,30): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(37,9): message : see declaration of 'AVLtree::getBalance'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(44,8): error C2027: use of undefined type 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(6): message : see declaration of 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(45,32): error C2664: 'BSTNode *AVLtree::rightRotate(BSTNode *)': cannot convert argument 1 from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(45,28): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(40,14): message : see declaration of 'AVLtree::rightRotate'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(47,8): error C2027: use of undefined type 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(6): message : see declaration of 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(48,31): error C2664: 'BSTNode *AVLtree::leftRotate(BSTNode *)': cannot convert argument 1 from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(48,27): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(41,14): message : see declaration of 'AVLtree::leftRotate'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(50,8): error C2027: use of undefined type 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(6): message : see declaration of 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(52,22): error C2352: 'AVLtree::leftRotate': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(41): message : see declaration of 'AVLtree::leftRotate'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(53,32): error C2664: 'BSTNode *AVLtree::rightRotate(BSTNode *)': cannot convert argument 1 from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(53,28): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(40,14): message : see declaration of 'AVLtree::rightRotate'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(56,8): error C2027: use of undefined type 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(6): message : see declaration of 'BSTNode'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(58,23): error C2352: 'AVLtree::rightRotate': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(40): message : see declaration of 'AVLtree::rightRotate'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(59,31): error C2664: 'BSTNode *AVLtree::leftRotate(BSTNode *)': cannot convert argument 1 from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(59,27): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(41,14): message : see declaration of 'AVLtree::leftRotate'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(66,1): error C2511: 'AVLNode *AVLtree::rightRotate(AVLNode *)': overloaded member function not found in 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(24): message : see declaration of 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(67,25): error C2440: 'initializing': cannot convert from 'BSTNode *' to 'AVLNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(67,16): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(68,27): error C2440: 'initializing': cannot convert from 'BSTNode *' to 'AVLNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(68,17): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(70,17): error C2440: '=': cannot convert from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(70,16): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(71,17): error C2440: '=': cannot convert from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(71,15): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(73,21): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(73,38): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(73,54): error C2660: 'AVLtree::max': function does not take 1 arguments
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(7,14): message : see declaration of 'AVLtree::max'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(74,21): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(74,38): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(74,54): error C2660: 'AVLtree::max': function does not take 1 arguments
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(7,14): message : see declaration of 'AVLtree::max'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(79,1): error C2511: 'AVLNode *AVLtree::leftRotate(AVLNode *)': overloaded member function not found in 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(24): message : see declaration of 'AVLtree'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(80,26): error C2440: 'initializing': cannot convert from 'BSTNode *' to 'AVLNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(80,16): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(81,26): error C2440: 'initializing': cannot convert from 'BSTNode *' to 'AVLNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(81,17): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(82,16): error C2440: '=': cannot convert from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(82,15): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(83,18): error C2440: '=': cannot convert from 'AVLNode *' to 'BSTNode *'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(83,16): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(85,21): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(85,38): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(85,54): error C2660: 'AVLtree::max': function does not take 1 arguments
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(7,14): message : see declaration of 'AVLtree::max'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(86,21): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(86,38): error C2352: 'AVLtree::height': illegal call of non-static member function
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.h(35): message : see declaration of 'AVLtree::height'
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(86,54): error C2660: 'AVLtree::max': function does not take 1 arguments
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\AVLtree.cpp(7,14): message : see declaration of 'AVLtree::max'
+  BinarySearchTree.cpp
+  Data Structures.cpp
+  Queue.cpp
+  Generating Code...
+C:\programowanie\c++\VisualStudio\Data Structures\Data Structures\Queue.cpp(39): warning C4715: 'Queue::dequeue': not all control paths return a value

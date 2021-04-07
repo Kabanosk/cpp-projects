@@ -3,12 +3,12 @@
 
 using namespace std;
 
-struct Node {
+struct BSTNode {
 	int key;
-	struct Node* left;
-	struct Node* right;
+	struct BSTNode* left;
+	struct BSTNode* right;
 
-	Node(int key) {
+	BSTNode(int key) {
 		this->key = key;
 		left = NULL;
 		right = NULL;
@@ -21,13 +21,13 @@ public:
 	BinarySearchTree();
 
 	void insert(int key);
-	Node* search(int key);
+	BSTNode* search(int key);
 	void deleteTree();
 
 private:
-	Node* root;
-	void deleteNode(Node* node);
-	void insert(int key, Node* node);
-	Node* search(int key, Node* node);
+	BSTNode* root;
+	void deleteNode(BSTNode* node);
+	void insert(int key, BSTNode* node);
+	BSTNode* search(int key, BSTNode* node);
 };
 

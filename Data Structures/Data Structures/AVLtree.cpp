@@ -8,13 +8,13 @@ int AVLtree::max(int a, int b)
 {
     return (a > b) ? a : b;
 }
-int AVLtree::height(Node* node)
+int AVLtree::height(AVLNode* node)
 {
     if (node == NULL)
         return 0;
     return node->height;
 }
-int AVLtree::getBalance(Node* node)
+int AVLtree::getBalance(AVLNode* node)
 {
     if (node == NULL)
         return 0;
@@ -24,7 +24,7 @@ int AVLtree::getBalance(Node* node)
 void AVLtree::insert(int key) {
     root = insert(root, key);
 }
-Node* AVLtree::insert(Node* node, int key)
+AVLNode* AVLtree::insert(AVLNode* node, int key)
 {
     if (node == NULL)
         return(node->newNode(key));
@@ -62,10 +62,10 @@ Node* AVLtree::insert(Node* node, int key)
     return node;
 }
 
-Node* AVLtree::rightRotate(Node* y)
+AVLNode* AVLtree::rightRotate(AVLNode* y)
 {
-    Node* x = y->left;
-    Node* T2 = x->right;
+    AVLNode* x = y->left;
+    AVLNode* T2 = x->right;
 
     x->right = y;
     y->left = T2;
@@ -75,10 +75,10 @@ Node* AVLtree::rightRotate(Node* y)
 
     return x;
 }
-Node* AVLtree::leftRotate(Node* x)
+AVLNode* AVLtree::leftRotate(AVLNode* x)
 {
-    Node* y = x->right;
-    Node* T2 = y->left;
+    AVLNode* y = x->right;
+    AVLNode* T2 = y->left;
     y->left = x;
     x->right = T2;
 

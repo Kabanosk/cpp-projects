@@ -1,20 +1,21 @@
 #pragma once
 #include <iostream>
 
-struct Node {
+struct AVLNode {
     int key, height;
-    struct Node* left;
-    struct Node* right;
-    Node(int val) {
+    struct AVLNode* left;
+    struct AVLNode* right;
+
+    AVLNode(int val) {
         key = val;
         height = 1;
         left = NULL;
         right = NULL;
     }
 
-    Node* newNode(int key)
+    AVLNode* newNode(int key)
     {
-        Node* node = new Node(key);
+        AVLNode* node = new AVLNode(key);
         return(node);
     }
 };
@@ -30,15 +31,15 @@ public:
 
 private:
 
-    Node* root;
+    AVLNode* root;
 
-    int height(Node* node);
+    int height(AVLNode* node);
     int max(int a, int b);
-    int getBalance(Node* node);
+    int getBalance(AVLNode* node);
 
-    Node* insert(Node* node, int key);
-    Node* rightRotate(Node* y);
-    Node* leftRotate(Node* x);
+    AVLNode* insert(AVLNode* node, int key);
+    AVLNode* rightRotate(AVLNode* y);
+    AVLNode* leftRotate(AVLNode* x);
 
 };
 

@@ -4,7 +4,7 @@ BinarySearchTree::BinarySearchTree() {
 	root = NULL;
 }
 
-void BinarySearchTree::deleteNode(Node* node) {
+void BinarySearchTree::deleteNode(BSTNode* node) {
 	if (node != NULL) {
 		deleteNode(node->left);
 		deleteNode(node->right);
@@ -17,31 +17,31 @@ void BinarySearchTree::deleteTree() {
 
 void BinarySearchTree::insert(int key) {
 	if (root == NULL) {
-		root = new Node(key);
+		root = new BSTNode(key);
 	}
 	else {
 		insert(key, root);
 	}
 }
-void BinarySearchTree::insert(int key, Node* node) {
+void BinarySearchTree::insert(int key, BSTNode* node) {
 	if (key >= node->key) {
 		if (node->right == NULL)
-			node->right = new Node(key);
+			node->right = new BSTNode(key);
 		else
 			insert(key, node->right);
 	}
 	else {
 		if (node->left == NULL)
-			node->left = new Node(key);
+			node->left = new BSTNode(key);
 		else
 			insert(key, node->left);
 	}
 }
 
-Node* BinarySearchTree::search(int key) {
+BSTNode* BinarySearchTree::search(int key) {
 	return search(key, root);
 }
-Node* BinarySearchTree::search(int key, Node* node) {
+BSTNode* BinarySearchTree::search(int key, BSTNode* node) {
 	if (node->key == NULL) {
 		return NULL;
 	}
