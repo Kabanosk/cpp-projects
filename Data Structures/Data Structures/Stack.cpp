@@ -1,39 +1,39 @@
 #include "Stack.h"
 
-StackArr::StackArr(int size) {
+Stack::Stack(int size) {
 	arr = new int[size];
 	capacity = size;
 	top = -1;
 }
-StackArr::~StackArr() {
+Stack::~Stack() {
 	delete[] arr;	
 }
 
-bool StackArr::isEmpty() {
+bool Stack::isEmpty() {
 	if (top == -1) return true;
 	else return false;
 }
-bool StackArr::isFull() {
+bool Stack::isFull() {
 	if (top == capacity - 1) return true;
 	else return false;
 }
-int StackArr::size() {
+int Stack::size() {
 	return top + 1;
 }
 
-void StackArr::push(int key) {
+void Stack::push(int key) {
 	if (isFull()) 
 		std::cout << "ERROR: Stack overflow\n";
 	else 
 		arr[++top] = key;
 }
-int StackArr::pop() {
+int Stack::pop() {
 	if (isEmpty()) 
 		std::cout << "ERROR: Stack underflow\n";
 	else 
 		return arr[top--];
 }
-int StackArr::peek() {
+int Stack::peek() {
 	if (isEmpty()) 
 		std::cout << "Stack is empty";
 	else 
