@@ -1,15 +1,15 @@
 #pragma once
 #include <iostream>
 
-class StackArr
+class Stack
 {
 private:
 	int* arr;
 	int top, capacity;
 
 public:
-	StackArr(int size);
-	~StackArr();
+	Stack(int size);
+	~Stack();
 	bool isEmpty();
 	bool isFull();
 	int size();
